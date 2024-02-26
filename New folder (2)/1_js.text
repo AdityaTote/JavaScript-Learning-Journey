@@ -1,0 +1,459 @@
+JAVASCRIPT
+
+    Javascript can be run on browser directly for inspect option in webpage.
+    Right click >> Inspect >> console
+    Javascript can be written in console tab in inspect.
+    console.log command is used to print (log) a message.
+
+    Syntax :-
+            console.log("Message to be written");
+
+    this is a common syntax of js.
+
+    In order to run js in ide's (vs code , etc) we need to create a js file and write the message or what have to be displayed, and then connect the js with a html file.
+    The connection btw the js and html file can be done by using <script src="file_location_file_name.js"><script> in the body tag.
+    Then open the html file >> right click >> Inspect >> console.
+    The message will be displayed.
+
+    VARIABLES IN JS :-
+
+        Variable in simple language is Storage / Container , in which we store data for further processing .
+        In js , variable are dynamically type , that value can be changed if defined before this defined.
+        Syntax :-
+                variable_name = data_value ;
+
+            to call the data in variable , simply call by variable_name.
+
+                console.log(variable_name);
+                variable_name should not be quot in single or double any one of , if it will then be consider as a simple string .
+ 
+    Variable Rule :-
+
+        -Variable is case sensitive.
+            there is difference btw Apple and apple. 
+        -Variable should contain letters , numbers, Underscore(_) , an $ sign.
+        -Variable Should start with letters , $ sign and Underscore(_).
+        -Reserved name cannot be variable name.
+
+    var Keyword:-
+        
+        used to before the variable . var can redeclare and update. 
+        var Keyword is a global scope variable.
+
+        Syntax:-
+         var Variable_Name = Data_value
+
+        e.g 
+         var a = 10;
+         var a = 6 ;
+
+         in above code the error will not be displayed on console.
+
+    let keyword  :-
+
+        let cannot be redeclare.
+        It can be update.
+        e.g 
+            let a=10;
+            let a=24;  // this will give error
+            a=24; //this is proper use of let 
+            console.log(a);
+
+
+
+        It is a block scope variable  i.e , it can be used in block or {} .
+
+        e.g 
+         let a = 10;
+         a=5;
+         {
+            let a=10;
+
+            console.log(a);
+         } 
+         {
+            let a= 3;
+
+            console.log(a)
+         }
+    
+    const keyword:-
+        const keyword does not redeclare and update the variable.
+        It is a block scope variable.
+        If const contain object then the key value inside the object can be mutate.
+        e.g
+
+            const a = 10;
+            const a = 20; // this will give error
+            a = 20; //this will give error
+
+    Data_Type:-
+        Data types are classified into two categories: primitive data types and object data types. Here's a brief overview of JavaScript data types:
+
+        Primitive Data Types:
+
+            String: Represents textual data. Enclosed in single or double quotes.
+            e.g 
+            let str = "Hello, World!";
+            there are soe peoperties of string 
+            i) lenght :
+                syntax :- variable_name.lenght; 
+                it give the word count of the string.
+
+            ii) slice(x,y):-
+                syntax :- variable_name.slice(x,y);
+                here slice is from breaking the string and x,y is for Indexing.
+                here , s is for starting index and y is for rear index. 
+
+
+            Number: Represents numeric data, both integers and floating-point numbers.
+            e.g 
+            let num = 42;
+            
+            Boolean: Represents either true or false.
+            e.g
+            let isTrue = true;
+            
+            Undefined: Represents the absence of a value or an uninitialized variable.
+            e.g
+            let undefinedVar;
+            
+            Null: Represents the intentional absence of any object value.
+            e.g
+            let nullVar = null;
+            
+            Symbol: Introduced in ECMAScript 6 (ES6), represents a unique identifier.
+            e.g
+            let sym = Symbol("unique");
+        
+        Object Data Types:
+
+            Object: A collection of key-value pairs. Used for storing and organizing data.
+            e.g
+            let person = { name: "John", age: 25 };
+            
+            Array: Ordered collection of values. Accessed by index.
+            e.g
+            let fruits = ["apple", "orange", "banana"];
+            
+            Function: A reusable block of code.
+            e.g
+            function addNumbers(a, b) {
+                return a + b;
+            }
+            
+            Date: Represents dates and times.
+            e.g
+            let currentDate = new Date();   
+
+    Comments :-
+
+        Part that is not executed in program.
+        // is used to comment a single line.
+        /* ....Some_Text.....*/ this is use to comment the code how much you need to comment.It can comment multiple line. 
+
+    Operators :-
+        Perform operation on data.
+        
+        Arithmetics Operators:
+            Arithmetic operators that allow you to perform mathematical operations on numbers. Here are the basic arithmetic operators in JavaScript:
+
+            Addition (+):
+                e.g
+                let sum = 5 + 3;  // Result: 8
+            
+            Subtraction (-):
+                e.g
+                let difference = 7 - 4;  // Result: 3
+            
+            Multiplication (*):
+                e.g
+                let product = 2 * 6;  // Result: 12
+            
+            Division (/):
+                e.g
+                let quotient = 10 / 2;  // Result: 5
+            
+            Modulus (%):
+                Returns the remainder of a division operation.
+                e.g    
+                let remainder = 15 % 4;  // Result: 3 (because 15 divided by 4 is 3 with a remainder of 3)
+            
+            Increment (++):
+                Increases the value of a variable by 1.
+                e.g   
+                let x = 5;
+                x++;  // Now x is 6
+            
+            Decrement (--):
+                Decreases the value of a variable by 1.
+                e.g
+                let y = 8;
+                y--;  // Now y is 7
+
+            Exponential (**):
+                e.g
+                let x = 8;
+                let y = 8;
+                x**y;  // Now y is 64
+
+        Assignment Operator:-
+
+        - = :- x=2
+        - += :- x+=y => x=x+y
+        - -= :- x-=y => x=x-y
+        - *= :- x*=y => x=x*y
+        - /= :- x/=y => x=x/y
+        - %= :- x%=y => x=x%y
+        - **= :- x**=y => x=x*y
+        
+        Comparison Operator:-
+            comparison operators are used to compare values and return a Boolean result (true or false). Here are the basic comparison operators:
+
+                Equal (==):
+                    Checks if two values are equal. It performs type coercion, so it may convert the operands to the same type before making the comparison.
+                    e.g
+                    let a = 5;
+                    let b = "5";
+                    console.log(a == b);  // true (because the values are equal after type coercion)
+                
+                Not Equal (!=):
+                    Checks if two values are not equal. Like the equal operator, it performs type coercion.
+                    e.g
+                    let a = 5;
+                    let b = "5";
+                    console.log(a != b);  // false (because the values are considered equal after type coercion)
+                
+                Strict Equal (===):
+                    Checks if two values are equal without performing type coercion. Both the value and the type must be the same.
+                    e.g
+                    let a = 5;
+                    let b = "5";
+                    console.log(a === b);  // false (because the values are not of the same type)
+                
+                Strict Not Equal (!==):
+                    Checks if two values are not equal without performing type coercion.
+                    e.g
+                    let a = 5;
+                    let b = "5";
+                    console.log(a !== b);  // true (because the values are not of the same type)
+                
+                Greater Than (>):
+                    Checks if the value on the left is greater than the value on the right.
+                    e.g
+                    let x = 8;
+                    let y = 5;
+                    console.log(x > y);  // true
+                
+                Less Than (<):
+                    Checks if the value on the left is less than the value on the right.
+                    e.g
+                    let x = 3;
+                    let y = 7;
+                    console.log(x < y);  // true
+                
+                Greater Than or Equal To (>=):
+                    Checks if the value on the left is greater than or equal to the value on the right.
+                    e.g
+                    let a = 10;
+                    let b = 10;
+                    console.log(a >= b);  // true
+                
+                Less Than or Equal To (<=):
+                    Checks if the value on the left is less than or equal to the value on the right.
+                    e.g
+                    let p = 5;
+                    let q = 8;
+                    console.log(p <= q);  // true
+
+        Logical Operator :-
+            used to perform logical operations on Boolean values. Here are the basic logical operators in JavaScript:
+
+            Logical AND (&&):
+                Returns true if both operands are true.
+                e.g
+                let x = true;
+                let y = false;
+                console.log(x && y);  // false
+            
+            Logical OR (||):
+                Returns true if at least one of the operands is true.
+                e.g
+                let a = true;
+                let b = false;
+                console.log(a || b);  // true
+            
+            Logical NOT (!):
+                Returns true if the operand is false and vice versa.
+                e.g
+                let p = true;
+                console.log(!p);  // false
+
+            Ternary Operator :-
+                Perform three (3) task over 3 operator.
+
+            Syntax :- 
+                condition ? true o/p : false o/p ; 
+
+    Conditional Statement :-
+
+        Conditional statements are used to make decisions based on different conditions. The two main types of conditional statements are if statements and switch statements. Here's a brief overview:
+
+        1. if Statement:
+            The if statement is used to execute a block of code if a specified condition is true.
+            e.g
+            let x = 10;
+            if (x > 5) {
+                console.log("x is greater than 5");
+            } else {
+                console.log("x is not greater than 5");
+            }
+
+        2. else if Statement:
+            You can use else if statements to check multiple conditions.
+            e.g 
+            if (num > 0) {
+                console.log("Positive number");
+            } else if (num < 0) {
+                console.log("Negative number");
+            } else {
+                console.log("Zero");
+            }
+
+
+    Alert and Prompt in JS :-
+
+        Alerts:
+
+            Purpose: Display a message box with a specified message and an OK button.
+            Usage:
+            javascript code :-
+            alert("This is an alert message!");
+           
+        Prompts:
+
+            Purpose: Display a dialog box that prompts the user for input. It includes a text input field and OK/Cancel buttons.
+            Usage:
+            javascript code :-
+            let userResponse = prompt("Please enter your name:", "Default Name");
+
+    Loops:-
+        loops are used too execute code multiple time.
+
+        for loop:-
+
+            for(i=1;i<=5;i++)
+            where first part i.e. i=1 is initialization,
+            i>=5 is stopping count and 
+            i++ / i-- is for updating value 
+
+
+    Function:-
+        is a block of code which can reuse whenever required. 
+        It reduces the lines of code.
+        Inscreses the quality and efficiency of code.
+        Syntax :-
+        // function initialization
+            function function_Name(){
+                // Function body: code to be executed
+                // It can include statements, expressions, etc.
+                // You can use parameters within the function body
+                // Return statement is optional
+            }
+
+        //function Calling
+
+            function_Name();
+
+    Numbers:-
+        Propertie <=
+        toString() => Specifies a radix for converting numeric values to strings. This value is only used for numbers.
+        toFixed() =>Argument(Number of digits after the decimal point. Must be in the range 0 - 20, inclusive.)
+                    Returns a string representing a number in fixed-point notation.
+        toLocalString() => A locale string, array of locale strings, Intl.Locale object, or array of Intl.
+                        Locale objects that contain one or more language or locale tags.
+                        If you include more than one locale string, list them in descending order of priority so that the first entry is the preferred locale. 
+                        If you omit this parameter, the default locale of the JavaScript runtime is used.
+                        Converts a number to a string by using the current or specified locale.
+        toPrecision() => Argument(Number of significant digits. Must be in the range 1 - 21, inclusive.)
+                        Returns a string containing a number represented either in exponential or fixed-point notation with a specified number of digits.
+        toExponential() => Argument(Number of digits after the decimal point. Must be in the range 0 - 20, inclusive.)
+                        Returns a string containing a number represented in exponential notation.
+
+    Math:-
+        Math.pow()=> Argument (The base value of the expression.)
+                    Returns the value of a base expression taken to a specified power.
+        Math.sqrt()=>A numeric expression.
+                    Returns the natural logarithm (base e) of a number.
+        Math.floor()=>A numeric expression.
+                    Returns the greatest integer less than or equal to its numeric argument.
+        Math.round()=>The value to be rounded to the nearest integer.
+                    Returns a supplied numeric expression rounded to the nearest integer.
+
+    Strings :-
+            let myName = "Aditya";
+            let myAge = "20";
+
+            console.log("My name is "+myName+" and age is "+myAge);    // Old School Method 
+            console.log(`My name is ${myName} and age is ${myAge}`);  // Recomonded Method 
+
+
+            const inGameName = new String("VecToR"); // this method used to represent the string. 
+            //The representation is in form: String {'Aditya'} 0:"A",1:"d" ,2:"i" ,3: "t",4:"y" , 5 :"a" length:6
+            // where 0 is key and A is its value, so it is stored in key value pair.
+
+            console.log(inGameName[2]); // acceseing the value of Key 2 .
+            console.log(inGameName.__proto__); // acceseing the object .
+            console.log(inGameName.length); // no. of character in the string.
+            console.log(inGameName.toUpperCase()); // Converts all the alphabetic characters in a string to uppercase.
+            console.log(inGameName.charAt(2)); // The zero-based index of the desired character.
+            // Returns the character at the specified index.
+            console.log(inGameName.toLowerCase()); // Converts all the alphabetic characters in a string to lowercase.
+            console.log(inGameName.charAt(3));
+            console.log(inGameName.indexOf("T")); // The substring to search for in the string
+            // Returns the position of the first occurrence of a substring.
+            console.log(inGameName.slice(0,3)); // The index to the beginning of the specified portion of stringObj.
+            // Returns a section of a string. Slice can be start from end of the string by -ve value.
+            console.log(inGameName.substring(0,3));// The index to the beginning of the specified portion of stringObj.
+            // Returns a section of a string.
+            const msg = "            Hello World       ";
+            console.log(msg.trim()); // Removes the leading and trailing white space and line terminator characters from a string.
+            console.log(msg.trimEnd()); // Removes the leading and trailing white space and line terminator characters from end of string.
+            console.log(msg.trimStart()); // Removes the leading and trailing white space and line terminator characters from Start of string.
+            console.log(msg.trimLeft()); // Removes the leading and trailing white space and line terminator characters from Left of string.
+            console.log(msg.trimRight()); // Removes the leading and trailing white space and line terminator characters from Right of string.
+
+            let url = "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/trimEnd";
+
+            console.log(url.replace('trimEnd',"")); // replace fun replace the string from first argument to second argument
+            console.log(url.includes("developers")) // search string Returns true if searchString appears as a substring of the result of converting this object to a String, at one or more positions that are greater than or equal to position; otherwise, returns false.
+    
+    Array :-
+
+            let myArr = [0,1,2,3,4,5,6,7,8,9,];
+
+            console.log(myArr[5]); // Retrive the value present in arry at the [index].
+            myArr.push(14); // New elements to add to the array.
+            console.log(myArr); // Appends new elements to the end of an array, and returns the new length of the array
+            myArr.pop(); // Removes the last element from an array and returns it. 
+            console.log(myArr)// If the array is empty, undefined is returned and the array is not modified.
+            myArr.unshift(15)// Elements to insert at the start of the array.
+            console.log(myArr);// Inserts new elements at the start of an array, and returns the new length of the array.
+            myArr.shift();// Removes the first element from an array and returns it. If the array is empty, undefined is returned and the array is not modified.
+            console.log(myArr);
+            console.log(myArr.length); // Displays the total lenght of an array.
+            console.log(myArr.includes(5)); // The element to search for.
+            // Determines whether an array includes a certain element, returning true or false as appropriate.
+            console.log(myArr.indexOf(8));// The value to locate in the array.
+            // Returns the index of the first occurrence of a value in an array, or -1 if it is not present.
+            console.log('A',myArr);
+
+            let myArr1 = myArr.slice(1,4);// The beginning index of the specified portion of the array. If start is undefined, then the slice begins at index 0.
+            // Returns a copy of a section of an array. For both start and end, a negative index can be used to indicate an offset from the end of the array. For example, -2 refers to the second to last element of the array.
+            console.log(myArr1)
+            console.log('B',myArr);
+
+            let myArr2 = myArr.splice(1,4);// The zero-based location in the array from which to start removing elements.
+            // Removes elements from an array and, if necessary, inserts new elements in their place, returning the deleted elements.
+            console.log(myArr2);
+            console.log('C',myArr);
