@@ -3,7 +3,7 @@
 ### Welcome to the JavaScript Learning Repository! This repository is designed to help you learn JavaScript.
 
 <div align="right">
-  <img src="your_image_path" alt="JavaScript Image" width="225px" height="225px">
+  <img src="download.png" alt="JavaScript Image">
 </div>
 
 ## Roadmap
