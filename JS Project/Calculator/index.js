@@ -40,17 +40,22 @@ document.addEventListener("keypress", function(event) {
 
     if (validKeys.includes(key)) {
         appendToDisplay(key);
-    }else if (event.keyCode === 13) { 
+    }
+});
+
+document.addEventListener("keydown", function(event){
+    if (event.key === 'Enter') { 
         calculate(); 
-    } else if (event.keyCode === 8) {
+    } else if (event.key === 'Backspace') {
         backSpace();
-    } else if (event.keyCode === 27) {
-        display.value="";             
-        appendEnabled = true;
+    } else if (event.key === 'Escape') {
+        clearDisplay();
     }
 });
 
 
+
 function backSpace() {
-    display.value = display.value.slice(0, -1);             
+    display.value = display.value.slice(0, -1);    
+    appendEnabled = true;         
 }
