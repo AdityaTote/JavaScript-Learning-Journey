@@ -47,7 +47,9 @@ document.addEventListener("keydown", function(event){
     if (event.key === 'Enter') { 
         calculate(); 
     } else if (event.key === 'Backspace') {
-        backSpace();
+        if (display.value !== "Invalid Format") {
+            backSpace();
+        }
     } else if (event.key === 'Escape') {
         clearDisplay();
     }
@@ -57,5 +59,5 @@ document.addEventListener("keydown", function(event){
 
 function backSpace() {
     display.value = display.value.slice(0, -1);    
-    appendEnabled = true;         
+    appendEnabled = false;         
 }

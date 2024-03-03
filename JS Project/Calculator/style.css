@@ -1,5 +1,6 @@
 
 #calculator {
+  border: solid black 4px;
   font-family: Arial, sans-serif;
   background-color: hsl(227, 14%, 13%);
   border-radius: 20px; 
@@ -8,6 +9,7 @@
 }
 
 #keys {
+  
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 5px; 
