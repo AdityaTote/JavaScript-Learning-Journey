@@ -94,10 +94,13 @@ console.log("Your Marks :",marks , " & Your grade is " ,grade );
 
 
 
+/* 
+Falsy values :-
+false , 0 ,-0 , null ,undefined , NaN , "" , `` ,Bigint(0).
 
-
-
-
+Truthy values :-
+true , 1 , -1 , "0" , " " , [] , {} , function(){} , BigInt(1) 
+*/
 
 
 

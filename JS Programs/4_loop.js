@@ -33,22 +33,22 @@
 // inp()
 
 // Fibonacii
-function fib(n) {
-    let a = [];
-    if (n === 1) {
-        console.log(0);
-    } else if (n === 2) {
-        console.log(0, 1);
-    } else {
-        a = [0, 1];
-        for (let i = 2; i < n; i++) {
-            let b = a[a.length - 2] + a[a.length - 1];
-            a.push(b);
-        }
-        console.log(a.join(', ')); 
-    }
-}
- fib(5);
+// function fib(n) {
+//     let a = [];
+//     if (n === 1) {
+//         console.log(0);
+//     } else if (n === 2) {
+//         console.log(0, 1);
+//     } else {
+//         a = [0, 1];
+//         for (let i = 2; i < n; i++) {
+//             let b = a[a.length - 2] + a[a.length - 1];
+//             a.push(b);
+//         }
+//         console.log(a.join(', ')); 
+//     }
+// }
+//  fib(5);
 
 
 
@@ -102,4 +102,25 @@ function fib(n) {
 
 
 
+
+// let index = 0;
+// while(index <= 8){
+//     console.log(`the vaue is ${index}`);
+//      index ++ ;
+// }
+
+// do while loop
+
+let a=1;
+do{
+    console.log("hello");
+}while(a>=5);
+
+// for of loop
+
+myarr=[1,2,3,4,5,6,7,8,9,10];
+
+for (const elements of myarr) {
+    console.log(elements);
+}
 

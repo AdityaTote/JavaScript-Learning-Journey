@@ -74,8 +74,8 @@ myObJ.greeting = function(){
 myObJ.greeting1 = function(){
     console.log(`Welcome ${this.name}`);
 }
-console.log(myObJ.greeting());
-console.log(myObJ.greeting1());
+// console.log(myObJ.greeting());
+// console.log(myObJ.greeting1());
 
 // Singalton object
 
@@ -93,7 +93,7 @@ const tinderUser = {
     }
 }
 
-console.log(tinderUser.UserName.fullName.firstName);
+// console.log(tinderUser.UserName.fullName.firstName);
 
 
 //merge of two object
@@ -106,8 +106,8 @@ const obj3 = {5:"a",6:"b"};
 const obj4 = Object.assign({},obj1,obj2,obj3); // Here , empty object is {} is target and other obj are source
 
 const obj5 = {...obj1,...obj2,...obj3}; 
-console.log(obj4);
-console.log(obj5);
+// console.log(obj4);
+// console.log(obj5);
 
 
 // Some IMP Propertie of Objects
@@ -117,8 +117,21 @@ User.id="1";
 User.name="John";
 User.isLoggedIn=true;
 
-console.log(Object.keys(User));
-console.log(Object.values(User));
-console.log(Object.entries(User));
-console.log(User.hasOwnProperty('isLoggedIn'));
+// console.log(Object.keys(User));
+// console.log(Object.values(User));
+// console.log(Object.entries(User));
+// console.log(User.hasOwnProperty('isLoggedIn'));
 
+// IN OBJECT FOROF LOOP CAN NOT B E USED FOR ITERABLE 
+
+// IN OBJECTS FORIN LOOP CAN BE ITERABLE
+
+const languages = {
+    JS :"JavaScript" ,
+    cpp : "C++" , 
+    rb :"Ruby"
+}
+
+for (const key in languages) {
+    console.log(`${key} is ${languages[key]}`);
+}
