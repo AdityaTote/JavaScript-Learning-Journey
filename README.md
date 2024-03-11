@@ -72,7 +72,7 @@
 
 ### Step 12: After Thsi You can Start with  JavaScript Frameworks 
 - ForntEnd Framework
-- [ ] Introduction to React.js
+- [ ] React.js
 - [ ] Vue.js Basics
 - [ ] Angular Basics
 
