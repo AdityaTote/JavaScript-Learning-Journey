@@ -8,7 +8,8 @@ addLang("Python")        // this method is used in small programs but which ther
 function addllang(lang){
     let ele = document.createElement('li');
     ele.appendChild(document.createTextNode(lang));
-    document.querySelector('.lang').appendChild(ele)
+    ele.style.color = 'orange'
+    document.querySelector('.lang').appendChild(ele);
 }
 addllang('Java')
 addLang('Kotlin')

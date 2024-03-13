@@ -5,19 +5,8 @@
     padding: 0;
     position: relative;     
 }
-body::before{
-  content: "";
-  background-image: url('img/Arnold.jpg');
-  background-size: cover;
-  background-position: center;
-  filter: blur(5px); /* Adjust the blur radius as needed */
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: -1;
-}
+
+
     
 .container {
   max-width: 400px;
@@ -109,9 +98,9 @@ body::before{
       font-weight: bold;
     }
     #weight-guide{
-      margin-left: 656px;
-      margin-top: 72px;
-      color: #fff;
+      margin-left: 1027px;
+      margin-top: -351px;
+      color: #000000;
       
 
     }
