@@ -14,7 +14,7 @@ let numGess = 1;
 
 let playGame = true;
 
-if (playGame){
+if (playGame){                              // 
     submit.addEventListener('click', (e) => {
         e.preventDefault();
         const guess = parseInt(inputGuess.value);
@@ -25,7 +25,7 @@ if (playGame){
 
 
 
-function validate(guess){
+function validate(guess){                          // check the input value is valid 
     if (isNaN(guess) || guess === ""   ){
         p.appendChild(document.createTextNode("Please enter valid no."));
         p.style.background='Red';
@@ -59,7 +59,7 @@ function validate(guess){
         }
     }
 }
-function checkGuess(guess){
+function checkGuess(guess){                // indicates the guess value possiblity
     if(guess === randomNum){
         displayMessage('You guess it right');
         endGame();
@@ -70,8 +70,8 @@ function checkGuess(guess){
     } 
 }
 
-function displayGuess(guess){
-    inputGuess.value = '';
+function displayGuess(guess){                  // update the value remining after guessing 
+    inputGuess.value = '';         
     if(numGess<=9){
     guessSlot.textContent += `${guess},`;
     } else {
@@ -82,11 +82,11 @@ function displayGuess(guess){
 
 }
 
-function displayMessage(message){
+function displayMessage(message){                // displays the message on page 
     bot.innerHTML = `<h2>${message}</h2>`;
 }
 
-function endGame(){
+function endGame(){                 // ends the game as all the chance are over
     playGame = false;
     inputGuess = "";
     inputGuess.disabled = true; 
@@ -99,7 +99,7 @@ function endGame(){
 
 }
 
-function newGame(){
+function newGame(){                      // satrts the new game 
     let newGame = document.querySelector('#newGame');
     newGame.addEventListener('click', (e) => {
         randomNum = parseInt(Math.random()*100+1);

@@ -17,7 +17,7 @@ addLang('Kotlin')
 // Edit
 
 let slang = document.querySelector('li:nth-child(2)');
-slang.innerHTML='Golang';  // not appropiate method 
+slang.innerHTML='Golang';  // not appropriate method 
 
 let flang = document.querySelector('li:nth-child(4)');
 let newel = document.createElement('li');

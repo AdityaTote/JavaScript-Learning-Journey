@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: black; color:white">
+
+    
+</body>
+<script>
+    const requestUrl = "https://api.github.com/users/AdityaTote";
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET', requestUrl);
+    xhr.onreadystatechange = function(){
+        console.log(xhr.readyState);
+        if(xhr.readyState === 4){
+            console.log(typeof responseText);
+            console.log(this.responseText);
+            const res = JSON.parse(this.responseText);   // converting String to object
+            console.log(typeof res);
+            console.log(res.followers);
+        }
+    }
+    xhr.send()
+</script>
+</html>

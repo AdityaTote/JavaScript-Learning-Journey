@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Ned Stark</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    const name1 = ()=>{
+        document.querySelector('h1').innerText='Arya Stark';
+    } 
+    const name2 = ()=>{
+        document.querySelector('h1').innerText='Rob Stark';
+    }
+    const name3 = ()=>{
+        document.querySelector('h1').innerText='John Snow';
+    }
+    const name4 = ()=>{
+        document.querySelector('h1').innerText='Ned Stark';
+    }
+
+    document.querySelector('#start').addEventListener('click',()=>{
+        const nameDisplay = [name1 , name2 ,name3 , name4];
+        for(i=0;i<=nameDisplay.length;i++){
+            setInterval(nameDisplay[i],(i+1)*1000);
+        }
+    })
+    document.querySelector('#stop').addEventListener('click',()=>{
+        const nameDisplay = [name1 , name2 ,name3 , name4];
+        for(i=0;i<=nameDisplay.length;i++){
+            clearInterval(nameDisplay[i]);
+        }
+    })
+</script>
+</html>

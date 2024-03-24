@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Ned Stark</h1>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    const name1 = function(){
+        document.querySelector('h1').innerHTML='John Snow';
+    }
+    const name2 = function(){
+        document.querySelector('h1').innerHTML='Rob Stark';
+    }
+    const name3 = function(){
+        document.querySelector('h1').innerHTML='Arya Stark';
+    }
+    // setTimeout(nameOne,2000);
+    // setTimeout(nameTwo,4000);
+    // setTimeout(nameThree,6000);
+
+    // const nameFuc = [name1 , name2 , name3]
+
+    // for (i=0;i<=nameFuc.length;i++){
+    //     setTimeout(nameFuc[i] , (i+1)*2000);
+    // }
+    
+    const changeName = setTimeout(name3 , 2000);
+    
+    document.querySelector('#stop').addEventListener('click',()=>{
+        clearTimeout(changeName);
+        console.log('stop');
+    })
+       
+
+</script>
+</html>
