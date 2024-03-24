@@ -83,5 +83,6 @@
 - [JavaScript MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 - [Eloquent JavaScript - Online Book](https://eloquentjavascript.net/)
 - [JavaScript.info](https://javascript.info/)
+- [ChaiAurCode JavaScript Repo](https://github.com/hiteshchoudhary/js-hindi-youtube)
 
 Feel free to follow along with this roadmap at your own pace. Happy coding!
