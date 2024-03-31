@@ -72,10 +72,14 @@
 
 ### Step 12: After Thsi You can Start with  JavaScript Frameworks 
 - ForntEnd Framework
-- [ ] React.js
+- [ ] React.js 
 - [ ] Vue.js Basics
 - [ ] Angular Basics
-
+  <br>
+  <b> Perfer React (tranding now) </b>
+  <br> <b> After React Dive into Next.js</b>
+  <br> <b>Then Go For</b>
+  <br>
 - Backend Framework
 - [ ] Express.js
 
