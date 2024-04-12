@@ -1,15 +1,15 @@
 let myArr = [1,2,3,4,5,6]
 
-let sumArr = myArr.reduce(function (acc ,currval){
-    // console.log(`acc : ${acc}, currval : ${currval} `);
-    return acc + currval ;
+let sumArr = myArr.reduce(function (acc ,currVal){
+    console.log(`acc : ${acc}, currVal : ${currVal} `);
+    return acc + currVal ;
 },0)
 
-// console.log(sumArr);
+console.log(sumArr);
 
-let myTotal = myArr.reduce((acc , currval) => acc + currval ,0 )
+let myTotal = myArr.reduce((acc , currVal) => acc + currVal ,0 )
 
-// console.log(myTotal);
+ console.log(myTotal);
 
 let cart =[
     {
@@ -25,7 +25,7 @@ let cart =[
         price : 12999
     },
     {
-        itemName : "modile dev course" ,
+        itemName : "mobile dev course" ,
         price : 5999
     },
     {

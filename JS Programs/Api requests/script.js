@@ -33,7 +33,7 @@ const xhr = new XMLHttpRequest();
 xhr.open('GET', requestUrl);
 xhr.onreadystatechange = function(){
     if(xhr.readyState === 4){
-       const res = JSON.parse(this.responseText);
+        const res = JSON.parse(this.responseText);
         img.src = res.avatar_url;
         name.innerHTML = `<h3>${res.name}</h3>`
         follower.textContent= `Follower:${res.followers}`;
