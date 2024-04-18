@@ -43,7 +43,7 @@
 const form = document.querySelector('form');
 
 form.addEventListener('submit' , (e) => {
-    e.preventDefault();
+    e.preventDefault();               
     let height = parseFloat(document.getElementById('height').value);
     let weight = parseFloat(document.getElementById('weight').value);
     let resultElement = document.querySelector('#result');

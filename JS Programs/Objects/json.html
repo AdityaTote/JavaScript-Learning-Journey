@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>Learning JSON</title>
+</head>
+<body>
+
+    <p><h2>JSON.parse():</h2> <h3>This function takes a JSON string as input and converts it into a JavaScript object.</h3></p>
+    <p><h2>JSON.stringify():</h2><h3> This function takes a JavaScript object as input and converts it into a JSON string.</h3></p>
+    <p><h1>Inspect the page for JSON Formatting </h1></p>
+
+    <script>
+        let profile = {
+        firstName: "John",
+        lastName: "Snow",
+        userName: "John_Snow69",
+        };
+
+        let obj = JSON.stringify(profile);
+        console.log(typeof obj);
+        console.log(obj);
+        
+        let json = JSON.parse(obj);
+        console.log(typeof json);
+        console.log(json);
+
+        </script>
+    
+</body>
+</html>
+
+

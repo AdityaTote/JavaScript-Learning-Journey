@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Local Storage</title>
+</head>
+<body style="font-size: large; font: bolder; background-color: black; color: aliceblue ;">
+    <h1>Local Storage</h1>
+    <p >Local storage is a mechanism that allows web applications to store data locally within the user's browser. It's a part of the Web Storage API along with session storage. Unlike session storage, which persists data only for the duration of the page session, data stored in local storage persists even after the browser is closed and reopened.
+        <br>
+        <br><b>Here's a basic overview of local storage in JavaScript:</b>
+        <br>
+        <br><b>Persistent Storage:</b> Local storage provides a way to store key-value pairs persistently on the user's browser. This means the data remains available even if the user closes the browser or navigates away from the page.
+        <br>
+        <br><b>Data Limitations:</b> Local storage has a larger storage limit compared to cookies, typically ranging from 5MB to 10MB depending on the browser. However, it's important to be mindful of this limit to avoid performance issues.
+        <br>
+        <br><b>Data Format:</b> Local storage stores data as strings. Therefore, when working with complex data types such as arrays or objects, you need to serialize and deserialize them using methods like JSON.stringify() and JSON.parse().
+        <br>
+        <br><b>Simple API:</b> Local storage provides a simple API consisting of methods like setItem(), getItem(), removeItem(), and clear() to store, retrieve, remove, and clear data, respectively.
+        <br>
+        <br><b>Cross-origin Restrictions:</b> Local storage is subject to same-origin policy restrictions, meaning that scripts from one origin cannot access data stored in local storage by another origin. This is a security measure to protect user data.
+        <br>
+        <br><b>Usage:</b> Local storage is commonly used for storing user preferences, session tokens, cached data, or any other data that needs to persist across browser sessions.</p>
+         
+    <script>
+        const books = [
+            { title: 'Book One', genre: 'Fiction', publish: 1981, edition: 2004 },
+            { title: 'Book Two', genre: 'Non-Fiction', publish: 1992, edition: 2008 },
+            { title: 'Book Three', genre: 'History', publish: 1999, edition: 2007 },
+            { title: 'Book Four', genre: 'Non-Fiction', publish: 1989, edition: 2010 },
+            { title: 'Book Five', genre: 'Science', publish: 2009, edition: 2014 },
+            { title: 'Book Six', genre: 'Fiction', publish: 1987, edition: 2010 },
+            { title: 'Book Seven', genre: 'History', publish: 1986, edition: 1996 },
+            { title: 'Book Eight', genre: 'Science', publish: 2011, edition: 2016 },
+            { title: 'Book Nine', genre: 'Non-Fiction', publish: 1981, edition: 1989 },
+        ];
+
+        localStorage.setItem('books',JSON.stringify(books));
+        let book2 = JSON.parse(localStorage.getItem('books'));
+        console.log(book2);
+        // localStorage.removeItem('books') // have pss key
+        localStorage.clear()
+
+ 
+    </script>
+</body>
+</html>
